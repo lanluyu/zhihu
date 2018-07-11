@@ -55,7 +55,7 @@ class ZhihuspiderSpiderMiddleware(object):
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
-
+'''
 class ZhihuspiderDownloaderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
@@ -101,3 +101,14 @@ class ZhihuspiderDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+'''
+# 设置随机切换User-Agent中间件
+from faker import Faker
+# from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
+class ZhihuspiderDownloadmiddlewareRandomUseragent(object):
+    def __init__(self):
+        self.fake = Faker()
+
+    def process_request(self,request,spider):
+        # print(self.fake.user_agent())
+        request.headers.setdefault('User-Agent',self.fake.user_agent())
