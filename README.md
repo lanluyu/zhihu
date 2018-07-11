@@ -22,15 +22,19 @@ zhihu是一个知乎话题内容的爬虫，可以爬取知乎所有的话题相
 
 ![流程图](https://github.com/lanluyu/zhihu/blob/master/pic/%E6%B5%81%E7%A8%8B%E5%9B%BE.PNG)
 
-* 请求(https://www.zhihu.com/topics)获取页面中所有的父话题及其id,父话题的链接需要POST请求，需要其id。
+* 请求(https://www.zhihu.com/topics) 获取页面中所有的父话题及其id,父话题的链接需要POST请求，需要其id。
 ![父话题](https://github.com/lanluyu/zhihu/blob/master/pic/topic.PNG)
+
 * 请求到的父话题页面，然后获取所有子话题，如下图：
 ![子话题](https://github.com/lanluyu/zhihu/blob/master/pic/topics.PNG)
+
 * 进入到单个子话题页面，点击“精华”，获取精华问题，如下图：
 ![精华问题](https://github.com/lanluyu/zhihu/blob/master/pic/question.PNG)
+
 * 进入到单个精华问题页面，获取其全部的回答。
 ![精华问题回答](https://github.com/lanluyu/zhihu/blob/master/pic/anwser.PNG)
-在精华问题的全部回答页面，能够获取全部的回答数、答题者id、粉丝数、答题内容、点赞数和相关的评论数，如下图：
+
+* 在精华问题的全部回答页面，能够获取全部的回答数、答题者id、粉丝数、答题内容、点赞数和相关的评论数，如下图：
 ![read](https://github.com/lanluyu/zhihu/blob/master/pic/bufen.PNG)
 
 
