@@ -40,5 +40,9 @@ zhihu是一个知乎话题内容的爬虫，可以爬取知乎所有的话题相
 
 爬取结果
 -
-整个爬取过程持续了80个小时，总共获取了1140727条数据，结果存储在MongoDB中。再导出为Excle文件。部分数据如下截图:<br>
+* 整个爬取过程持续了80个小时，总共获取了1140727条数据，结果存储在MongoDB中。再导出为Excle文件。部分数据如下截图:<br>
 ![部分问答信息](https://github.com/lanluyu/zhihu/blob/master/pic/mongodb.PNG)
+* 根据2974个问题制作的词云如下：<br>
+![词云](https://github.com/lanluyu/zhihu/blob/master/pic/lanluyu%E8%AF%8D%E4%BA%91%E5%9B%BE20180711.png)
+
+
