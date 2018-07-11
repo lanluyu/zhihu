@@ -103,8 +103,8 @@ class ZhihuspiderDownloaderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 '''
 # 设置随机切换User-Agent中间件
+
 from faker import Faker
-# from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 class ZhihuspiderDownloadmiddlewareRandomUseragent(object):
     def __init__(self):
         self.fake = Faker()
